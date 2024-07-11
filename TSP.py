@@ -1,16 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[21]:
-
-
 import numpy as np
-import random
-
-
-# In[22]:
-
-
 import random
 
 # Define the number of cities
@@ -67,7 +55,6 @@ result = sum(fitness_scores)
 print("Summation of Fitness Scores:", result)
 
 
-# In[28]:
 
 
 best_index = np.argmin(fitness_scores)
@@ -83,7 +70,6 @@ print("Best Fitness:", best_fitness)
 # 2.Select the best individual from the k individuals
 # 3. Repeat process 1 and 2 until you have the desired amount of population
 
-# In[43]:
 
 
 def tournament_selection(population, fitness_scores, tournament_size):
@@ -106,7 +92,6 @@ for i, parent in enumerate(selected_parents):
     print(f"Parent {i+1}: {parent}")
 
 
-# In[54]:
 
 
 # Function for tournament selection
@@ -136,10 +121,8 @@ for i, parent in enumerate(selected_parents):
 # Crossover
 # Apply crossover (recombination) to the selected parents to create offspring, use one point crossover , in TSP permution is  take number untel point from parent 1 , then the second parent is scanned and if number is not yet in the offspring it is added 
 
-# In[65]:
 
 
-import random
 
 # Function for one-point crossover
 def one_point_crossover(parent1, parent2):
@@ -174,10 +157,9 @@ print("Offspring after one-point crossover:", offspring)
 # Mutation
 # Apply mutation to the offspring. This involves making small random changes to some of the genes (cities) in the population.
 
-# In[96]:
 
 
-import random
+
 
 def mutation(chrom, mutation_prop):
     mutated_chrom = chrom[:]  # Create a copy of the chromosome to avoid modifying the original
@@ -198,10 +180,7 @@ result = mutation(offspring, mutation_prop)
 print("Mutated offspring:", result)
 
 
-# In[103]:
 
-
-import random
 
 def mutation(chrom, mutation_prop):
     mutated_chrom = chrom[:]  # Create a copy of the chromosome to avoid modifying the original
@@ -221,7 +200,6 @@ result = mutation(offspring, mutation_prop)
 print("Mutated offspring:", result)
 
 
-# In[ ]:
 
 
 
